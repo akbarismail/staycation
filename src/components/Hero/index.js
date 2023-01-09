@@ -6,11 +6,12 @@ import IconTraveler from '../../assets/images/icons/icon-traveler.svg';
 import IconTreasure from '../../assets/images/icons/icon-treasure.svg';
 import Button from '../Button';
 import formatNumber from '../../utils/formatNumber';
+import { object } from 'prop-types';
 
 const Hero = ({ data, refMostPicked }) => {
   const showMostPicked = () => {
     window.scrollTo({
-      top: refMostPicked.current.page.offsetTop - 30,
+      top: refMostPicked.current.offsetTop - 30,
       behavior: 'smooth',
     });
   };
@@ -98,3 +99,8 @@ const Hero = ({ data, refMostPicked }) => {
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  data: object,
+  refMostPicked: object,
+};
