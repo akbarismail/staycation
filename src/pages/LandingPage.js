@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Categories from '../components/Categories';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import MostPicked from '../components/MostPicked';
@@ -19,6 +20,7 @@ class LandingPage extends Component {
           data={landingPage.mostPicked}
           refMostPicked={this.refMostPicked}
         />
+        <Categories data={landingPage.categories} />
       </>
     );
   }
